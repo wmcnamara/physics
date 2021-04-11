@@ -28,6 +28,7 @@
 #define Q3VEC3_H
 
 #include "../common/q3Types.h"
+#include "../../../glm/glm.hpp" // needed for conversion constructors
 
 r32 q3Abs( r32 a );
 r32 q3Min( r32 a, r32 b );
@@ -52,6 +53,9 @@ struct q3Vec3
 
 	q3Vec3( );
 	q3Vec3( r32 _x, r32 _y, r32 _z );
+	
+	q3Vec3(const glm::vec3& f) { x = f.x; y = f.y; z = f.z; }
+	operator glm::vec3() const { return glm::vec3(x, y, z); }
 
 	void Set( r32 _x, r32 _y, r32 _z );
 	void SetAll( r32 a );

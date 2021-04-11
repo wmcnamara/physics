@@ -53,10 +53,10 @@ class q3Body
 {
 public:
 
-	// Adds a box to this body. Boxes are all defined in local space
+	// Adds a box to this body. Brecalculate its mass values. No contacts
+	// will be created until the nextoxes are all defined in local space
 	// of their owning body. Boxes cannot be defined relative to one
-	// another. The body will recalculate its mass values. No contacts
-	// will be created until the next q3Scene::Step( ) call.
+	// another. The body will  q3Scene::Step( ) call.
 	const q3Box* AddBox( const q3BoxDef& def );
 
 	// Removes this box from the body and broadphase. Forces the body

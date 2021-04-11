@@ -39,6 +39,14 @@ struct q3Mat3
 	q3Vec3 ex;
 	q3Vec3 ey;
 	q3Vec3 ez;
+	
+	q3Mat3(const Mat3& f) 
+	{
+		ex = f[0];
+		ey = f[1];
+		ez = f[2];
+	}
+	operator Mat3() const { return Mat3(ex, ey, ez); }
 
 	q3Mat3( );
 	q3Mat3( r32 a, r32 b, r32 c, r32 d, r32 e, r32 f, r32 g, r32 h, r32 i );
