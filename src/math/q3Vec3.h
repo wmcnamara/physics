@@ -28,7 +28,7 @@
 #define Q3VEC3_H
 
 #include "../common/q3Types.h"
-#include "../../../glm/glm.hpp" // needed for conversion constructors
+#include "glm/glm.hpp" // needed for conversion constructors
 
 r32 q3Abs( r32 a );
 r32 q3Min( r32 a, r32 b );
