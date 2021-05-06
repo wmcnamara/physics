@@ -40,6 +40,7 @@ struct q3Mat3
 	q3Vec3 ey;
 	q3Vec3 ez;
 	
+	//Conversion constructors to GLM types
 	q3Mat3(const Mat3& f) 
 	{
 		ex = f[0];
